@@ -1,0 +1,38 @@
+ READ ME
+---- INSTRUCTION TO SUCCESSFULLY COMPILE AND RUN THE PROGRAM ----
+
+In order to run the program first, you need to confirm the UID and GID of your UNIX system
+For that open a bash and run the command id.
+
+example:
+run:      id
+(output)  uid=1000(pedro) gid=1000(pedro) groups=1000(pedro),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),113(lpadmin),128(sambashare)
+
+In this example, the UID and the GID are 1000.
+Now open the passwd file, and in the third and seventh field write the uid and gid that you found (running the command id)
+
+Each entry of the passwd file contains the following fields:
+
+username:encrypted_password:UID:SALT:No_failed_attemps:Password_age:GID:comments:home_directory:shellcode
+example:
+user1:FPmadrB54AAfg:1000:FP:0:0:1000:USERname1:/home/user1:/bin/sh
+
+
+The valid usernames and the respective correct passwords are
+  -username   :   password  (with the dot)
+  - user1     :   user1.
+  - user2     :   user2.
+  - user3     :   user3.
+  - user4     :   user4.
+  - user5     :   user5.
+
+
+To compile the program open the terminal in the same directory where the file are save and run the command make.
+After that run the command ./project and the execution will start.
+
+
+The system will start and then you can write the username.
+After that you can entry the password.
+If the username and the password are correct a new shell will start. 
+
+--------------------------------------------------------------------------------
